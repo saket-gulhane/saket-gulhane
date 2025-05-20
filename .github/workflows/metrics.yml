@@ -1,6 +1,6 @@
 name: Metrics
 on:
-  schedule: [{cron: "0 * * * *"}]  # Every hour
+  schedule: [{cron: "0 0 1 * *"}]
   workflow_dispatch:              # Allow manual trigger
 
 jobs:
