@@ -12,4 +12,4 @@ jobs:
           filename: metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: "header, activity, community, repositories, metadata"
-          template: repositories  # <--- this is the template, e.g. classic / terminal / markdown etc.
+          template: repository  # <--- this is the template, e.g. classic / terminal / markdown etc.
