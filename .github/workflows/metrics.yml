@@ -1,0 +1,15 @@
+name: Metrics
+on:
+  schedule: [{cron: "0 * * * *"}]  # Every hour
+  workflow_dispatch:              # Allow manual trigger
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: "header, activity, community, repositories, metadata"
+          template: repositories  # <--- this is the template, e.g. classic / terminal / markdown etc.
